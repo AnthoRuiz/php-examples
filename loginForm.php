@@ -23,11 +23,8 @@ $con->commit();
 if($result->num_rows == 1){
 $consult = $result->fetch_array(MYSQLI_ASSOC);
 	if($consult['email'] == $email && $consult['pass'] == $pass){
-		include('home.html')
+		include('home.php');
 	}
 }else{
 	include('errorLogin.html');
 }
-
-	$con->close();
-
